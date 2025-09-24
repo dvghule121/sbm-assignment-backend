@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ExpenseViewSet, reports_view
+from .views import ExpenseViewSet
 from .auth_views import register, login, logout
 
 router = DefaultRouter()
@@ -11,5 +11,4 @@ urlpatterns = [
     path('api/auth/register/', register, name='register'),
     path('api/auth/login/', login, name='login'),
     path('api/auth/logout/', logout, name='logout'),
-    path('reports/', reports_view, name='reports'),
 ]

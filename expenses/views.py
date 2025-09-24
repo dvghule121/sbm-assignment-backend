@@ -37,7 +37,3 @@ class ExpenseViewSet(viewsets.ModelViewSet):
         
         serializer = ExpenseSummarySerializer(summary_data, many=True)
         return Response(serializer.data)
-
-def reports_view(request):
-    """Render the reports page with Chart.js visualization"""
-    return render(request, 'expenses/reports.html')
